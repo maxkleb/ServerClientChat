@@ -294,12 +294,13 @@ public class Client extends javax.swing.JFrame {
                   //clientText.setText(clientText.getText()+"\nYour message has been send!");
                   sendText.setText("");
                 } catch (IOException ex) {
-                  clientText.setText(clientText.getText()+"\nCannot open PrintWriter!");
+                 // clientText.setText(clientText.getText()+"\nCannot open PrintWriter!");
                 }  
             }
              
         };
         sendThread.start();
+        privateField.setText("public");
         }  
     }//GEN-LAST:event_sendButtonActionPerformed
 

@@ -129,7 +129,7 @@ public class Server extends javax.swing.JFrame {
                          
                          tr[count].start();
                          count++;
-                           serverText.setText(serverText.getText()+"\nSocket has been opened.\nCounter is: "+count+" now.");
+                           serverText.setText(serverText.getText()+"\nSocket has been opened.\n");
                          InetAddress addr = clientSocket[count-1].getInetAddress();
                               serverText.setText(serverText.getText()+"\nConnection to " +addr.getHostAddress()+"\n");
                  
@@ -179,7 +179,7 @@ public class Server extends javax.swing.JFrame {
    // private String name = "";
     
     public void run(){
-         serverText.setText(serverText.getText()+"\nThe name is: "+name );
+       //  serverText.setText(serverText.getText()+"\nThe name is: "+name );
         BufferedReader in;
         PrintWriter out;
         try {
@@ -195,7 +195,7 @@ public class Server extends javax.swing.JFrame {
                  }
                  
                  if (msg.contains("<system>:name")){
-                      serverText.setText(serverText.getText()+"\nSystem message is :"+msg);
+                   //   serverText.setText(serverText.getText()+"\nSystem message is :"+msg);
                      name = msg.substring(14);
                       names.add(name);
                       nameArray[count-1] = name; 
